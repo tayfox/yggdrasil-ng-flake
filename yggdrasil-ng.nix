@@ -312,7 +312,7 @@ in
         after = [ "network.target" ];
         requires = [ "network-online.target" ];
         serviceConfig = {
-          ExecStart = [ "${cfg.package}/bin/yggdrasil-ng --config /etc/nixos/result/etc/yggdrasil-ng/config.toml" ];
+          ExecStart = [ "${cfg.package}/bin/yggdrasil-ng --config /etc/yggdrasil-ng/config.toml" ];
           User = cfg.user;
           Group = cfg.user;
           AmbientCapabilities = [ "CAP_NET_ADMIN" "CAP_NET_RAW" ];
