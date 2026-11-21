@@ -114,7 +114,7 @@ in
       '';
     };
 
-    NodeInfoPrivacy = lib.mkOption {
+    nodeInfoPrivacy = lib.mkOption {
       type = lib.types.bool;
       default = false;
       description = "If true, your node_info will not be visible to other nodes.";
@@ -168,7 +168,7 @@ in
       '';
     };
 
-    AllowedPublicKeys = lib.mkOption {
+    allowedPublicKeys = lib.mkOption {
       type = lib.types.listOf lib.types.str;
       default = [];
       description = ''
@@ -272,8 +272,8 @@ in
           group_password = cfg.groupPassword;
           # Node info
           node_info = {
-            node_info_privacy = cfg.NodeInfoPrivacy;
-            allowed_public_keys = cfg.AllowedPublicKeys;
+            node_info_privacy = cfg.nodeInfoPrivacy;
+            allowed_public_keys = cfg.allowedPublicKeys;
           };
           # Multicast peer discovery
           multicast_interfaces = cfg.multicastInterfaces;
