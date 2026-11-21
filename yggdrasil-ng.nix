@@ -15,7 +15,7 @@ in
 
     package = lib.mkOption {
       type = lib.types.package;
-      default = pkgs.yggdrasil-ng;
+      default = pkgs.callPackage ./yggdrasil-ng-drv.nix { };
     };
 
     user = lib.mkOption {
