@@ -311,6 +311,7 @@ in
         wantedBy = [ "multi-user.target" ];
         after = [ "network.target" ];
         requires = [ "network-online.target" ];
+        restartTriggers = [ configFile ];
         serviceConfig = {
           ExecStart = [ "${cfg.package}/bin/yggdrasil-ng --config /etc/yggdrasil-ng/config.toml" ];
           User = cfg.user;
